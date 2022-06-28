@@ -10,6 +10,7 @@ import {
   ChartPathProvider,
   ChartYLabel,
 } from "@rainbow-me/animated-charts";
+import { useRoute } from "@react-navigation/native";
 
 const CoinDetailedScreen = () => {
   const {
@@ -23,6 +24,11 @@ const CoinDetailedScreen = () => {
       price_change_percentage_24h,
     },
   } = Coin;
+
+  const route = useRoute();
+  const {
+    params: { coinId },
+  } = route;
 
   const [coinValue, setCoinValue] = useState("1");
   const [usdValue, setUsdValue] = useState(current_price.usd.toString());
