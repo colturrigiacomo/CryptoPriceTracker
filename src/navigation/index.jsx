@@ -1,20 +1,20 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/HomeScreen/index";
 import CoinDetailedScreen from "../screens/CoinDetailedScreen/index";
 import routes from "./routes";
+import BottomTabNavigator from "./BottomTabNavigator";
 
 const Stack = createNativeStackNavigator();
 
-function Navigation() {
+export default Navigation = () => {
   return (
     <Stack.Navigator
-      initialRouteName={routes.HOME}
-      screenOptions={{ headerShown: false }}
+      initialRouteName={routes.ROOT}
+      screenOptions={{
+        headerShown: false,
+      }}
     >
-      <Stack.Screen name={routes.HOME} component={HomeScreen} />
+      <Stack.Screen name={routes.ROOT} component={BottomTabNavigator} />
       <Stack.Screen name={routes.COIN_DETAIL} component={CoinDetailedScreen} />
     </Stack.Navigator>
   );
-}
-
-export default Navigation;
+};
