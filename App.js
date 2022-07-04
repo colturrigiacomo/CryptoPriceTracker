@@ -4,14 +4,17 @@ import { NavigationContainer } from "@react-navigation/native";
 import Navigation from "./src/navigation";
 import colors from "./src/config/colors";
 import navigationTheme from "./src/navigation/navigationTheme";
+import WatchlistProvider from "./src/context/WatchlistContext";
 
 export default function App() {
   return (
     <NavigationContainer theme={navigationTheme}>
-      <View style={styles.container}>
-        <Navigation />
-        <StatusBar style="light" />
-      </View>
+      <WatchlistProvider>
+        <View style={styles.container}>
+          <Navigation />
+          <StatusBar style="light" />
+        </View>
+      </WatchlistProvider>
     </NavigationContainer>
   );
 }
