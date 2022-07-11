@@ -9,9 +9,9 @@ export const getDetailedCoinApi = async (coinId) => {
   return response.data;
 };
 
-export const getCoinMarketChartApi = async (coinId) => {
+export const getCoinMarketChartApi = async (coinId, days = 1) => {
   const response = await axios.get(
-    `${BASE_URL}/coins/${coinId}/market_chart?vs_currency=usd&days=1&interval=hourly`
+    `${BASE_URL}/coins/${coinId}/market_chart?vs_currency=usd&days=${days}&interval=hourly`
   );
   return response.data;
 };
