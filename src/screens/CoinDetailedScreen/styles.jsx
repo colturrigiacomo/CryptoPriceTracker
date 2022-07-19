@@ -39,7 +39,21 @@ const styles = StyleSheet.create({
     backgroundColor: "#2B2B2B",
     paddingVertical: 5,
     borderRadius: 5,
-    marginVertical: 10,
+    marginVertical: 20,
+  },
+  candleText: {
+    color: "white",
+    fontWeight: "700",
+  },
+  candleDataContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginHorizontal: 10,
+    marginTop: 20,
+  },
+  candleTextLabel: {
+    color: "grey",
+    fontSize: 13,
   },
 });
 
